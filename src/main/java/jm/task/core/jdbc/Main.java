@@ -7,12 +7,11 @@ public class Main {
         UserServiceImpl userService = new UserServiceImpl();
 
         userService.createUsersTable();
-        userService.saveUser("Artem" ,"Petrov" , (byte) 18);
-        userService.saveUser("Ivan" ,"Fedorov" , (byte) 45);
+        userService.saveUser("Zhanna" ,"Siraeva" , (byte) 18);
+        userService.saveUser("Azat" ,"Ibragimov" , (byte) 30);
         userService.saveUser("Irina" ,"Efimova" , (byte) 23);
         userService.saveUser("Dmitriy" ,"Chehov" , (byte) 25);
         System.out.println(userService.getAllUsers());
-        userService.cleanUsersTable();
-        userService.dropUsersTable();
+
     }
 }
