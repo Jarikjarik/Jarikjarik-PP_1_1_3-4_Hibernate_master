@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users", schema = "jdbctest")
 public class User {
-    @Column
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,7 +16,7 @@ public class User {
     private String lastName;
 
     @Column(nullable = false)
-    private Byte age;
+    private byte age;
 
     public User() {
 
@@ -35,15 +34,6 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
     }
 
     public String getName() {
@@ -68,5 +58,15 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
